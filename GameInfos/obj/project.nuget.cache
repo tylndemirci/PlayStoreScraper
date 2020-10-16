@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "XpuRdsVlDqF3Qm4bU7eMFg9d7Uw0F/WqzObFvAjikMHjNqWJoBO22Bkpx/mR/gjmG3gZ5qC/cl9SkFd6DJt9Tg==",
+  "dgSpecHash": "xGemKWfBDypi6Ng1WyHaqE51KlapF2dEUqe837QkMU7C2C/enF2uG9/nyFNWCaP8lGFD5wmrjwhBI5SJ3x/UOw==",
   "success": true,
   "projectFilePath": "C:\\Users\\t4yl4\\RiderProjects\\GameInfos\\GameInfos\\GameInfos.csproj",
   "expectedPackageFiles": [
@@ -31,7 +31,10 @@
     "C:\\Users\\t4yl4\\.nuget\\packages\\runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\t4yl4\\.nuget\\packages\\runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\t4yl4\\.nuget\\packages\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
+    "C:\\Users\\t4yl4\\.nuget\\packages\\selenium.chrome.webdriver\\85.0.0\\selenium.chrome.webdriver.85.0.0.nupkg.sha512",
+    "C:\\Users\\t4yl4\\.nuget\\packages\\selenium.support\\4.0.0-alpha05\\selenium.support.4.0.0-alpha05.nupkg.sha512",
     "C:\\Users\\t4yl4\\.nuget\\packages\\selenium.webdriver\\4.0.0-alpha05\\selenium.webdriver.4.0.0-alpha05.nupkg.sha512",
+    "C:\\Users\\t4yl4\\.nuget\\packages\\selenium.webdriverbackedselenium\\4.0.0-alpha05\\selenium.webdriverbackedselenium.4.0.0-alpha05.nupkg.sha512",
     "C:\\Users\\t4yl4\\.nuget\\packages\\system.appcontext\\4.3.0\\system.appcontext.4.3.0.nupkg.sha512",
     "C:\\Users\\t4yl4\\.nuget\\packages\\system.buffers\\4.3.0\\system.buffers.4.3.0.nupkg.sha512",
     "C:\\Users\\t4yl4\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",

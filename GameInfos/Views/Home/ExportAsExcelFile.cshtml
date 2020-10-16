@@ -1,0 +1,34 @@
+﻿@model IEnumerable<GameModel>
+@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <table class="table table-sm table-striped">
+                <thead>
+                <tr>
+                    <td>Install Count</td>
+                    <td>Game Name</td>
+                    <td>Company Name</td>
+                    <td>Company Email</td>
+                    <td>Origin</td>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.InstallCount</td>
+                         <td>@item.GameName</td>
+                         <td>@item.CompanyName</td>
+                         <td>@item.Email</td>
+                         <td>@item.Country</td>
+                    </tr>
+                }
+              
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

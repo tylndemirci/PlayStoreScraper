@@ -333,6 +333,24 @@
           }
         }
       },
+      "Selenium.Chrome.WebDriver/85.0.0": {
+        "type": "package",
+        "build": {
+          "build/Selenium.Chrome.WebDriver.targets": {}
+        }
+      },
+      "Selenium.Support/4.0.0-alpha05": {
+        "type": "package",
+        "dependencies": {
+          "Selenium.WebDriver": "4.0.0-alpha05"
+        },
+        "compile": {
+          "lib/netstandard2.0/WebDriver.Support.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/WebDriver.Support.dll": {}
+        }
+      },
       "Selenium.WebDriver/4.0.0-alpha05": {
         "type": "package",
         "dependencies": {
@@ -343,6 +361,20 @@
         },
         "runtime": {
           "lib/netstandard2.0/WebDriver.dll": {}
+        }
+      },
+      "Selenium.WebDriverBackedSelenium/4.0.0-alpha05": {
+        "type": "package",
+        "dependencies": {
+          "Selenium.WebDriver": "4.0.0-alpha05"
+        },
+        "compile": {
+          "lib/netstandard2.0/Selenium.WebDriverBackedSelenium.dll": {},
+          "lib/netstandard2.0/Selenium.WebDriverBackedSelenium.ref.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Selenium.WebDriverBackedSelenium.dll": {},
+          "lib/netstandard2.0/Selenium.WebDriverBackedSelenium.ref.dll": {}
         }
       },
       "System.AppContext/4.3.0": {
@@ -1863,6 +1895,34 @@
         "runtimes/ubuntu.16.10-x64/native/System.Security.Cryptography.Native.OpenSsl.so"
       ]
     },
+    "Selenium.Chrome.WebDriver/85.0.0": {
+      "sha512": "wRg7it2bBMyYtOsarTy0bWtS2fCZI08KGTef2kH381DYpGP+wX8j6f/7ABv1nmrUj5CCVmTeDeYeXS5g00JXSw==",
+      "type": "package",
+      "path": "selenium.chrome.webdriver/85.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/Selenium.Chrome.WebDriver.targets",
+        "driver/chromedriver.exe",
+        "selenium.chrome.webdriver.85.0.0.nupkg.sha512",
+        "selenium.chrome.webdriver.nuspec"
+      ]
+    },
+    "Selenium.Support/4.0.0-alpha05": {
+      "sha512": "mEp+3gUXtr4SJPg6oRrPLyND98y3N4J0H6MA1GMdjFW14kj01OE0+KFQtgyrN6EBKzxiDTkZoMk8mkF3Al/cKg==",
+      "type": "package",
+      "path": "selenium.support/4.0.0-alpha05",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/WebDriver.Support.dll",
+        "lib/net46/WebDriver.Support.dll",
+        "lib/net47/WebDriver.Support.dll",
+        "lib/netstandard2.0/WebDriver.Support.dll",
+        "selenium.support.4.0.0-alpha05.nupkg.sha512",
+        "selenium.support.nuspec"
+      ]
+    },
     "Selenium.WebDriver/4.0.0-alpha05": {
       "sha512": "ZaaY0T5eTDjxcJSZbgZuVUbc4eCSoY8cCjLHwAjHoeBBZQIq3SrlCTkaFNZ46288niZUlS9a5ehLAF7rpa86zQ==",
       "type": "package",
@@ -1879,6 +1939,33 @@
         "lib/netstandard2.0/WebDriver.dll",
         "selenium.webdriver.4.0.0-alpha05.nupkg.sha512",
         "selenium.webdriver.nuspec"
+      ]
+    },
+    "Selenium.WebDriverBackedSelenium/4.0.0-alpha05": {
+      "sha512": "TSJ+vtvA46pUtvws3UD9rOReOuIILXSHNGwVKNOAmopBbJHHRWoZrg2TMguMbnqPuxcFOnAhl43Hn4G6jersRQ==",
+      "type": "package",
+      "path": "selenium.webdriverbackedselenium/4.0.0-alpha05",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/Selenium.WebDriverBackedSelenium.dll",
+        "lib/net45/Selenium.WebDriverBackedSelenium.dll-0.params",
+        "lib/net45/Selenium.WebDriverBackedSelenium.pdb",
+        "lib/net45/Selenium.WebDriverBackedSelenium.ref.dll",
+        "lib/net46/Selenium.WebDriverBackedSelenium.dll",
+        "lib/net46/Selenium.WebDriverBackedSelenium.dll-0.params",
+        "lib/net46/Selenium.WebDriverBackedSelenium.pdb",
+        "lib/net46/Selenium.WebDriverBackedSelenium.ref.dll",
+        "lib/net47/Selenium.WebDriverBackedSelenium.dll",
+        "lib/net47/Selenium.WebDriverBackedSelenium.dll-0.params",
+        "lib/net47/Selenium.WebDriverBackedSelenium.pdb",
+        "lib/net47/Selenium.WebDriverBackedSelenium.ref.dll",
+        "lib/netstandard2.0/Selenium.WebDriverBackedSelenium.dll",
+        "lib/netstandard2.0/Selenium.WebDriverBackedSelenium.dll-0.params",
+        "lib/netstandard2.0/Selenium.WebDriverBackedSelenium.pdb",
+        "lib/netstandard2.0/Selenium.WebDriverBackedSelenium.ref.dll",
+        "selenium.webdriverbackedselenium.4.0.0-alpha05.nupkg.sha512",
+        "selenium.webdriverbackedselenium.nuspec"
       ]
     },
     "System.AppContext/4.3.0": {
@@ -4900,7 +4987,10 @@
     ".NETCoreApp,Version=v3.0": [
       "ClosedXML >= 0.95.3",
       "HtmlAgilityPack >= 1.11.24",
-      "Selenium.WebDriver >= 4.0.0-alpha05"
+      "Selenium.Chrome.WebDriver >= 85.0.0",
+      "Selenium.Support >= 4.0.0-alpha05",
+      "Selenium.WebDriver >= 4.0.0-alpha05",
+      "Selenium.WebDriverBackedSelenium >= 4.0.0-alpha05"
     ]
   },
   "packageFolders": {
@@ -4952,7 +5042,19 @@
             "target": "Package",
             "version": "[1.11.24, )"
           },
+          "Selenium.Chrome.WebDriver": {
+            "target": "Package",
+            "version": "[85.0.0, )"
+          },
+          "Selenium.Support": {
+            "target": "Package",
+            "version": "[4.0.0-alpha05, )"
+          },
           "Selenium.WebDriver": {
+            "target": "Package",
+            "version": "[4.0.0-alpha05, )"
+          },
+          "Selenium.WebDriverBackedSelenium": {
             "target": "Package",
             "version": "[4.0.0-alpha05, )"
           }

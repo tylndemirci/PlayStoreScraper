@@ -26,7 +26,10 @@
         "dependencies": {
           "ClosedXML": "0.95.3",
           "HtmlAgilityPack": "1.11.24",
+          "Selenium.Chrome.WebDriver": "85.0.0",
+          "Selenium.Support": "4.0.0-alpha05",
           "Selenium.WebDriver": "4.0.0-alpha05",
+          "Selenium.WebDriverBackedSelenium": "4.0.0-alpha05",
           "Microsoft.AspNetCore.Antiforgery": "3.0.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "3.0.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "3.0.0.0",
@@ -493,6 +496,21 @@
       "runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
       "runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
       "runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
+      "Selenium.Chrome.WebDriver/85.0.0": {},
+      "Selenium.Support/4.0.0-alpha05": {
+        "dependencies": {
+          "Selenium.WebDriver": "4.0.0-alpha05"
+        },
+        "runtime": {
+          "lib/netstandard2.0/WebDriver.Support.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/WebDriver.Support.dll": {}
+        }
+      },
       "Selenium.WebDriver/4.0.0-alpha05": {
         "dependencies": {
           "Newtonsoft.Json": "12.0.2"
@@ -505,6 +523,25 @@
         },
         "compile": {
           "lib/netstandard2.0/WebDriver.dll": {}
+        }
+      },
+      "Selenium.WebDriverBackedSelenium/4.0.0-alpha05": {
+        "dependencies": {
+          "Selenium.WebDriver": "4.0.0-alpha05"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Selenium.WebDriverBackedSelenium.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.0"
+          },
+          "lib/netstandard2.0/Selenium.WebDriverBackedSelenium.ref.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Selenium.WebDriverBackedSelenium.dll": {},
+          "lib/netstandard2.0/Selenium.WebDriverBackedSelenium.ref.dll": {}
         }
       },
       "System.AppContext/4.3.0": {
@@ -2991,12 +3028,33 @@
       "path": "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "hashPath": "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512"
     },
+    "Selenium.Chrome.WebDriver/85.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wRg7it2bBMyYtOsarTy0bWtS2fCZI08KGTef2kH381DYpGP+wX8j6f/7ABv1nmrUj5CCVmTeDeYeXS5g00JXSw==",
+      "path": "selenium.chrome.webdriver/85.0.0",
+      "hashPath": "selenium.chrome.webdriver.85.0.0.nupkg.sha512"
+    },
+    "Selenium.Support/4.0.0-alpha05": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-mEp+3gUXtr4SJPg6oRrPLyND98y3N4J0H6MA1GMdjFW14kj01OE0+KFQtgyrN6EBKzxiDTkZoMk8mkF3Al/cKg==",
+      "path": "selenium.support/4.0.0-alpha05",
+      "hashPath": "selenium.support.4.0.0-alpha05.nupkg.sha512"
+    },
     "Selenium.WebDriver/4.0.0-alpha05": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-ZaaY0T5eTDjxcJSZbgZuVUbc4eCSoY8cCjLHwAjHoeBBZQIq3SrlCTkaFNZ46288niZUlS9a5ehLAF7rpa86zQ==",
       "path": "selenium.webdriver/4.0.0-alpha05",
       "hashPath": "selenium.webdriver.4.0.0-alpha05.nupkg.sha512"
+    },
+    "Selenium.WebDriverBackedSelenium/4.0.0-alpha05": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-TSJ+vtvA46pUtvws3UD9rOReOuIILXSHNGwVKNOAmopBbJHHRWoZrg2TMguMbnqPuxcFOnAhl43Hn4G6jersRQ==",
+      "path": "selenium.webdriverbackedselenium/4.0.0-alpha05",
+      "hashPath": "selenium.webdriverbackedselenium.4.0.0-alpha05.nupkg.sha512"
     },
     "System.AppContext/4.3.0": {
       "type": "package",

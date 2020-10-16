@@ -1,16 +1,18 @@
-﻿﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
+﻿using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using ClosedXML.Excel;
+using GameInfos.Extensions;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using GameInfos.Models;
 using HtmlAgilityPack;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+
 
 namespace GameInfos.Controllers
 {
@@ -25,45 +27,27 @@ namespace GameInfos.Controllers
         {
             var url =
                 "https://play.google.com/store/apps/collection/cluster?clp=0g4gCh4KGHRvcHNlbGxpbmdfbmV3X2ZyZWVfR0FNRRAHGAM%3D:S:ANO1ljIxjbU&gsr=CiPSDiAKHgoYdG9wc2VsbGluZ19uZXdfZnJlZV9HQU1FEAcYAw%3D%3D:S:ANO1ljJL0LQ";
+            var chromeDriver = new ChromeDriver();
+            chromeDriver.Navigate().GoToUrl(url);
+            chromeDriver.Manage().Window.Maximize();
+            for (int i = 0; i < 5; i++)
+            {
+                chromeDriver.Scripts().ExecuteScript("window.scrollBy(0,document.body.scrollHeight)");
+                Thread.Sleep(2000);
+            }
 
+            var gameList = chromeDriver.FindElementsByXPath("//div[@class='wXUyZd']//a[contains(@href,'/store/apps/details?id')]").ToList();
 
-            var httpClient = new HttpClient();
-            var html = await httpClient.GetStringAsync(url);
-
-            var htmlDocument = new HtmlDocument();
-            htmlDocument.LoadHtml(html);
-
-            var gamesHtml = htmlDocument.DocumentNode.Descendants("div").Where(node => node.GetAttributeValue("class", "").Equals("ZmHEEd ")).ToList();
-            var gameList = gamesHtml[0].Descendants("div").Where(x => x.GetAttributeValue("class", "").Contains("ImZGtf ")).ToList();
             var list = new List<string>();
-            foreach (var game in gameList)
+
+            for (int i = 0; i < gameList.Count; i++)
             {
-                for (int i = 0; i < gameList.Count; i++)
-                {
-                    var gameLinkList = gameList[i].Descendants("a").Where(x => x.GetAttributeValue("href", "").Contains("/store/apps/details?id"));
-                    foreach (var innerGameLink in gameLinkList)
-                    {
-                        if (!list.Contains(innerGameLink.GetAttributeValue("href", "")))
-                        {
-                            list.Add(innerGameLink.GetAttributeValue("href", ""));
-                        }
-                    }
-                }
+                list.Add(gameList[i].GetAttribute("href"));
             }
-
-            var urlList = new List<string>();
-
-            foreach (var gameUrl in list)
-            {
-                var insert = gameUrl.Insert(0, "https://play.google.com");
-                urlList.Add(insert);
-            }
-
 
             var returnModel = new GameModel();
 
-
-            foreach (var urlOfGame in urlList)
+            foreach (var urlOfGame in list)
             {
                 var httpClientFor = new HttpClient();
                 var htmlFor = httpClientFor.GetStringAsync(urlOfGame);
@@ -104,10 +88,8 @@ namespace GameInfos.Controllers
                 }
                 else
                 {
-                      returnModel.Country.Add(country);
+                    returnModel.Country.Add(country);
                 }
-              
-               
             }
 
 

@@ -37,3 +37,7 @@ C:\Users\t4yl4\RiderProjects\GameInfos\GameInfos\obj\Debug\netcoreapp3.0\GameInf
 C:\Users\t4yl4\RiderProjects\GameInfos\GameInfos\obj\Debug\netcoreapp3.0\GameInfos.csproj.CopyComplete
 C:\Users\t4yl4\RiderProjects\GameInfos\GameInfos\bin\Debug\netcoreapp3.0\Newtonsoft.Json.dll
 C:\Users\t4yl4\RiderProjects\GameInfos\GameInfos\bin\Debug\netcoreapp3.0\WebDriver.dll
+C:\Users\t4yl4\RiderProjects\GameInfos\GameInfos\obj\Debug\netcoreapp3.0\Razor\Views\Home\ExportAsExcelFile.cshtml.g.cs
+C:\Users\t4yl4\RiderProjects\GameInfos\GameInfos\bin\Debug\netcoreapp3.0\WebDriver.Support.dll
+C:\Users\t4yl4\RiderProjects\GameInfos\GameInfos\bin\Debug\netcoreapp3.0\Selenium.WebDriverBackedSelenium.dll
+C:\Users\t4yl4\RiderProjects\GameInfos\GameInfos\bin\Debug\netcoreapp3.0\Selenium.WebDriverBackedSelenium.ref.dll

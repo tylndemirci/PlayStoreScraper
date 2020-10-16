@@ -38,7 +38,19 @@
           "target": "Package",
           "version": "[1.11.24, )"
         },
+        "Selenium.Chrome.WebDriver": {
+          "target": "Package",
+          "version": "[85.0.0, )"
+        },
+        "Selenium.Support": {
+          "target": "Package",
+          "version": "[4.0.0-alpha05, )"
+        },
         "Selenium.WebDriver": {
+          "target": "Package",
+          "version": "[4.0.0-alpha05, )"
+        },
+        "Selenium.WebDriverBackedSelenium": {
           "target": "Package",
           "version": "[4.0.0-alpha05, )"
         }
